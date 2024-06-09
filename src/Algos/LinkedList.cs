@@ -4,6 +4,7 @@ namespace Algos;
 
 public class LinkedList<T> : IEnumerable<T>
 {
+    private int _count = 0;
     private Node<T>? _head;
     private Node<T>? _tail;
 
@@ -20,9 +21,9 @@ public class LinkedList<T> : IEnumerable<T>
         }
     }
 
-    public int Count => throw new NotImplementedException();
+    public int Count => _count;
 
-    public bool IsEmpty => throw new NotImplementedException();
+    public bool IsEmpty => _count == 0;
 
     public void AddAtIndex(int index, T value) => throw new NotImplementedException();
 
@@ -43,6 +44,7 @@ public class LinkedList<T> : IEnumerable<T>
         }
 
         _head = node;
+        ++_count;
     }
 
     public void AddToTail(T value)
@@ -62,6 +64,7 @@ public class LinkedList<T> : IEnumerable<T>
         }
 
         _tail = node;
+        ++_count;
     }
 
     public T GetAtIndex(int index) => throw new NotImplementedException();

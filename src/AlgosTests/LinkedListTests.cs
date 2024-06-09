@@ -13,6 +13,8 @@ public class LinkedListTests
 
         // Assert
         Assert.Equal("1,2,3", string.Join(',', linkedList));
+        Assert.Equal(3, linkedList.Count);
+        Assert.False(linkedList.IsEmpty);
     }
 
     [Fact]
@@ -26,6 +28,8 @@ public class LinkedListTests
 
         // Assert
         Assert.Equal("0", string.Join(',', linkedList));
+        Assert.Equal(1, linkedList.Count);
+        Assert.False(linkedList.IsEmpty);
     }
 
     [Fact]
@@ -40,6 +44,8 @@ public class LinkedListTests
 
         // Assert
         Assert.Equal("0,1,2,3", string.Join(',', linkedList));
+        Assert.Equal(4, linkedList.Count);
+        Assert.False(linkedList.IsEmpty);
     }
 
     [Fact]
@@ -53,6 +59,8 @@ public class LinkedListTests
 
         // Assert
         Assert.Equal("0", string.Join(',', linkedList));
+        Assert.Equal(1, linkedList.Count);
+        Assert.False(linkedList.IsEmpty);
     }
 
     [Fact]
@@ -67,6 +75,8 @@ public class LinkedListTests
 
         // Assert
         Assert.Equal("1,2,3,4", string.Join(',', linkedList));
+        Assert.Equal(4, linkedList.Count);
+        Assert.False(linkedList.IsEmpty);
     }
 
     [Fact]
