@@ -20,6 +20,12 @@ public class LinkedList<T> : IEnumerable<T>
         }
     }
 
+    public int Count => throw new NotImplementedException();
+
+    public bool IsEmpty => throw new NotImplementedException();
+
+    public void AddAtIndex(int index, T value) => throw new NotImplementedException();
+
     public void AddToHead(T value)
     {
         var node = new Node<T>(value);
@@ -58,6 +64,8 @@ public class LinkedList<T> : IEnumerable<T>
         _tail = node;
     }
 
+    public T GetAtIndex(int index) => throw new NotImplementedException();
+
     public IEnumerator<T> GetEnumerator()
     {
         var current = _head;
@@ -71,6 +79,18 @@ public class LinkedList<T> : IEnumerable<T>
     }
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+    public T GetHead() => throw new NotImplementedException();
+
+    public T GetTail() => throw new NotImplementedException();
+
+    public void RemoveAtIndex(int index) => throw new NotImplementedException();
+
+    public void RemoveFromHead() => throw new NotImplementedException();
+
+    public void RemoveFromTail() => throw new NotImplementedException();
+
+    public void Reverse() => throw new NotImplementedException();
 
     private class Node<TNode> where TNode : T
     {
