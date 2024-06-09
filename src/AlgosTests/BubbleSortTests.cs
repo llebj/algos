@@ -1,6 +1,6 @@
-﻿using Algos;
+﻿using Algorithms;
 
-namespace AlgosTests;
+namespace AlgorythmsTests;
 
 public class BubbleSortTests
 {
@@ -12,8 +12,8 @@ public class BubbleSortTests
     {
         // Arrange
         // Act
-        BubbleSort.Sort(input);
-        
+        BubbleSort.Run(input);
+
         // Assert
         Assert.Equal(expected, string.Join(',', input));
     }

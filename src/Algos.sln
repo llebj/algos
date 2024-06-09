@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgosTests", "AlgosTests\AlgosTests.csproj", "{ED2FC458-C6D7-4D90-9613-8F997768D844}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmsTests", "AlgosTests\AlgorithmsTests.csproj", "{ED2FC458-C6D7-4D90-9613-8F997768D844}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algos", "Algos\Algos.csproj", "{2ACCA503-5978-4381-A010-A70D0D2E042F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algos\Algorithms.csproj", "{2ACCA503-5978-4381-A010-A70D0D2E042F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStructures\DataStructures.csproj", "{DD15B5B8-E204-4A07-B771-C18E6EF46608}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresTests", "DataStructuresTests\DataStructuresTests.csproj", "{E1224E23-739D-4CFE-98E6-7CF1E99270E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{2ACCA503-5978-4381-A010-A70D0D2E042F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ACCA503-5978-4381-A010-A70D0D2E042F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ACCA503-5978-4381-A010-A70D0D2E042F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD15B5B8-E204-4A07-B771-C18E6EF46608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD15B5B8-E204-4A07-B771-C18E6EF46608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD15B5B8-E204-4A07-B771-C18E6EF46608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD15B5B8-E204-4A07-B771-C18E6EF46608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1224E23-739D-4CFE-98E6-7CF1E99270E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1224E23-739D-4CFE-98E6-7CF1E99270E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1224E23-739D-4CFE-98E6-7CF1E99270E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1224E23-739D-4CFE-98E6-7CF1E99270E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
-using Algos;
+using Algorithms;
 
-namespace AlgosTests;
+namespace AlgorythmsTests;
 
 public class LinearSearchTests
 {
@@ -10,7 +10,7 @@ public class LinearSearchTests
     public void Found(int needle, bool result)
     {
         // Arrange
-        var haystack = new[] {1, 2, 3, 4, 5};
+        var haystack = new[] { 1, 2, 3, 4, 5 };
 
         // Act
         var found = LinearSearch.Run(haystack, needle);

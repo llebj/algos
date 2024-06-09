@@ -1,4 +1,4 @@
-﻿namespace AlgosTests;
+﻿namespace DataStructuresTests;
 
 public class LinkedListTests
 {
@@ -9,7 +9,7 @@ public class LinkedListTests
         var input = new int[] { 1, 2, 3 };
 
         // Act
-        var linkedList = new Algos.LinkedList<int>(input);
+        var linkedList = new DataStructures.LinkedList<int>(input);
 
         // Assert
         Assert.Equal("1,2,3", string.Join(',', linkedList));
@@ -21,7 +21,7 @@ public class LinkedListTests
     public void GivenAnEmptyLinkedList_WhenAnItemIsAddedToHead_ThenCorrectlyUpdateTheLinkedList()
     {
         // Arrange
-        var linkedList = new Algos.LinkedList<int>();
+        var linkedList = new DataStructures.LinkedList<int>();
 
         // Act
         linkedList.AddToHead(0);
@@ -37,7 +37,7 @@ public class LinkedListTests
     {
         // Arrange
         var input = new int[] { 1, 2, 3 };
-        var linkedList = new Algos.LinkedList<int>(input);
+        var linkedList = new DataStructures.LinkedList<int>(input);
 
         // Act
         linkedList.AddToHead(0);
@@ -52,7 +52,7 @@ public class LinkedListTests
     public void GivenAnEmptyLinkedList_WhenAnItemIsAddedToTail_ThenCorrectlyUpdateTheLinkedList()
     {
         // Arrange
-        var linkedList = new Algos.LinkedList<int>();
+        var linkedList = new DataStructures.LinkedList<int>();
 
         // Act
         linkedList.AddToTail(0);
@@ -68,7 +68,7 @@ public class LinkedListTests
     {
         // Arrange
         var values = new int[] { 1, 2, 3 };
-        var linkedList = new Algos.LinkedList<int>(values);
+        var linkedList = new DataStructures.LinkedList<int>(values);
 
         // Act
         linkedList.AddToTail(4);
@@ -83,7 +83,7 @@ public class LinkedListTests
     public void GivenAnEmptyLinkedList_WhenAnItemIsAddedToHead_ThenASubsequentItemCanBeAddedToTail()
     {
         // Arrange
-        var linkedList = new Algos.LinkedList<int>();
+        var linkedList = new DataStructures.LinkedList<int>();
 
         // Act
         linkedList.AddToHead(0);
@@ -97,7 +97,7 @@ public class LinkedListTests
     public void GivenAnEmptyLinkedList_WhenAnItemIsAddedToTail_ThenASubsequentItemCanBeAddedToHead()
     {
         // Arrange
-        var linkedList = new Algos.LinkedList<int>();
+        var linkedList = new DataStructures.LinkedList<int>();
 
         // Act
         linkedList.AddToTail(0);

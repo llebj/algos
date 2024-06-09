@@ -1,8 +1,8 @@
-﻿namespace Algos;
+﻿namespace Algorithms;
 
 public static class BubbleSort
 {
-    public static void Sort(int[] nums)
+    public static void Run(int[] nums)
     {
         for (int i = 0; i < nums.Length; i++)
         {

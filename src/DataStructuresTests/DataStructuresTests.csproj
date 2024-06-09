@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Algos\Algos.csproj" />
+    <ProjectReference Include="..\DataStructures\DataStructures.csproj" />
   </ItemGroup>
 
 </Project>

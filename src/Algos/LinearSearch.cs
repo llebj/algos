@@ -1,4 +1,4 @@
-﻿namespace Algos;
+﻿namespace Algorithms;
 
 public class LinearSearch
 {

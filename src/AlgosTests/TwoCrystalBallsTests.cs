@@ -1,6 +1,6 @@
-﻿using Algos;
+﻿using Algorithms;
 
-namespace AlgosTests;
+namespace AlgorythmsTests;
 
 public class TwoCrystalBallsTests
 {

@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Algorithms;
+namespace DataStructures;
 
 public class LinkedList<T> : IEnumerable<T>
 {
