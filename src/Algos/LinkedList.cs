@@ -6,6 +6,11 @@ public class LinkedList<T> : IEnumerable<T>
 {
     private Node<T>? _head;
 
+    public LinkedList()
+    {
+        
+    }
+
     public LinkedList(IEnumerable<T> values)
     {
         if (!values.Any())
@@ -30,6 +35,19 @@ public class LinkedList<T> : IEnumerable<T>
                 previous = node;
             }
         }
+    }
+
+    public void AddToHead(T value)
+    {
+        var node = new Node<T>(value);
+
+        if (_head is not null)
+        {
+            node.Next = _head;
+            _head.Previous = node;
+        }
+
+        _head = node;
     }
 
     public IEnumerator<T> GetEnumerator()
