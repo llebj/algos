@@ -3,6 +3,17 @@
 public class LinkedListTests
 {
     [Fact]
+    public void WhenANewLinkedListIsConstructed_ThenTheLinkedListIsEmpty()
+    {
+        // Arrange
+        // Act
+        var linkedList = new DataStructures.LinkedList<int>();
+
+        // Assert
+        Assert.True(linkedList.IsEmpty);
+    }
+
+    [Fact]
     public void GivenAnArrayOfIntegers_WhenALinkedListIsConstructed_ThenConstructALinkedListWithTheCorrectValues()
     {
         // Arrange
@@ -17,6 +28,7 @@ public class LinkedListTests
         Assert.False(linkedList.IsEmpty);
     }
 
+    // Add to head and tail tests.
     [Fact]
     public void GivenAnEmptyLinkedList_WhenAnItemIsAddedToHead_ThenCorrectlyUpdateTheLinkedList()
     {
@@ -105,5 +117,139 @@ public class LinkedListTests
 
         // Assert
         Assert.Equal("1,0", string.Join(',', linkedList));
+    }
+
+    // Remove from head and tail tests.
+    [Fact]
+    public void GivenAnExistingLinkedList_WhenAnItemIsRemovedFromHead_ThenCorrectlyUpdateTheLinkedList()
+    {
+        // Arrange
+        var input = new int[] { 1, 2, 3 };
+        var linkedList = new DataStructures.LinkedList<int>(input);
+
+        // Act
+        linkedList.RemoveFromHead();
+
+        // Assert
+        Assert.Equal("2,3", string.Join(',', linkedList));
+        Assert.Equal(2, linkedList.Count);
+        Assert.False(linkedList.IsEmpty);
+    }
+
+    [Fact]
+    public void GivenAnExistingLinkedList_WhenAnItemIsRemovedFromTail_ThenCorrectlyUpdateTheLinkedList()
+    {
+        // Arrange
+        var input = new int[] { 1, 2, 3 };
+        var linkedList = new DataStructures.LinkedList<int>(input);
+
+        // Act
+        linkedList.RemoveFromTail();
+
+        // Assert
+        Assert.Equal("1,2", string.Join(',', linkedList));
+        Assert.Equal(2, linkedList.Count);
+        Assert.False(linkedList.IsEmpty);
+    }
+
+    [Fact]
+    public void GivenALinkedListWithOneItem_WhenTheLastItemIsRemovedFromHead_ThenTheLinkedListIsEmpty()
+    {
+        // Arrange
+        var input = new int[] { 1 };
+        var linkedList = new DataStructures.LinkedList<int>(input);
+
+        // Act
+        linkedList.RemoveFromHead();
+
+        // Assert
+        Assert.True(linkedList.IsEmpty);
+    }
+
+    [Fact]
+    public void GivenALinkedListWithOneItem_WhenTheLastItemIsRemovedFromTail_ThenTheLinkedListIsEmpty()
+    {
+        // Arrange
+        var input = new int[] { 1 };
+        var linkedList = new DataStructures.LinkedList<int>(input);
+
+        // Act
+        linkedList.RemoveFromTail();
+
+        // Assert
+        Assert.True(linkedList.IsEmpty);
+    }
+
+    [Fact]
+    public void GivenAnEmptyLinkedList_WhenRemoveFromHeadIsCalled_ThenThrowAnInvalidOperationException()
+    {
+        // Arrange
+        var linkedList = new DataStructures.LinkedList<int>();
+
+        // Act
+        // Assert
+        Assert.Throws<InvalidOperationException>(linkedList.RemoveFromHead);
+    }
+
+    [Fact]
+    public void GivenAnEmptyLinkedList_WhenRemoveFromTailIsCalled_ThenThrowAnInvalidOperationException()
+    {
+        // Arrange
+        var linkedList = new DataStructures.LinkedList<int>();
+
+        // Act
+        // Assert
+        Assert.Throws<InvalidOperationException>(linkedList.RemoveFromTail);
+    }
+
+    // Get head and tail tests.
+    [Fact]
+    public void GivenAnEmptyLinkedList_WhenCallingGetHead_ThenThrowAnInvalidOperationException()
+    {
+        // Arrange
+        var linkedList = new DataStructures.LinkedList<int>();
+
+        // Act
+        // Assert
+        Assert.Throws<InvalidOperationException>(() => linkedList.GetHead());
+    }
+
+    [Fact]
+    public void GivenAnEmptyLinkedList_WhenCallingGetTail_ThenThrowAnInvalidOperationException()
+    {
+        // Arrange
+        var linkedList = new DataStructures.LinkedList<int>();
+
+        // Act
+        // Assert
+        Assert.Throws<InvalidOperationException>(() => linkedList.GetTail());
+    }
+
+    [Fact]
+    public void GivenAnExistingLinkedList_WhenCallingGetHead_ThenReturnTheCorrectValue()
+    {
+        // Arrange
+        var input = new int[] { 1, 2, 3 };
+        var linkedList = new DataStructures.LinkedList<int>(input);
+
+        // Act
+        var result = linkedList.GetHead();
+
+        // Assert
+        Assert.Equal(1, result);
+    }
+
+    [Fact]
+    public void GivenAnExistingLinkedList_WhenCallingGetTail_ThenReturnTheCorrectValue()
+    {
+        // Arrange
+        var input = new int[] { 1, 2, 3 };
+        var linkedList = new DataStructures.LinkedList<int>(input);
+
+        // Act
+        var result = linkedList.GetTail();
+
+        // Assert
+        Assert.Equal(3, result);
     }
 }
