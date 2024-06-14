@@ -155,7 +155,22 @@ public class LinkedList<T> : IEnumerable<T>
         --_count;
     }
 
-    public void Reverse() => throw new NotImplementedException();
+    public void Reverse()
+    {
+        Node<T>? prev = null;
+        Node<T>? next = _head;
+
+        while (next is not null)
+        {
+            var current = next;
+            next = next.Next;
+            current.Next = prev;
+            current.Previous = next;
+            prev = current;
+        }
+
+        (_tail, _head) = (_head, _tail);
+    }
 
     private class Node<TNode> where TNode : T
     {

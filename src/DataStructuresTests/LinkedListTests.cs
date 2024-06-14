@@ -252,4 +252,49 @@ public class LinkedListTests
         // Assert
         Assert.Equal(3, result);
     }
+
+    // Reverse list tests.
+    [Fact]
+    public void GivenAnExistingLinkedList_WhenReverseIsCalled_ThenCorrectlyReverseTheLinkedList()
+    {
+        // Arrange
+        var input = new int[] { 1, 2, 3, 4 };
+        var linkedList = new DataStructures.LinkedList<int>(input);
+
+        // Act
+        linkedList.Reverse();
+
+        // Assert
+        Assert.Equal("4,3,2,1", string.Join(',', linkedList));
+    }
+
+    [Fact]
+    public void GivenAReversedLinkedList_WhenGetHeadIsCalled_ThenReturnTheCorrectValue()
+    {
+        // Arrange
+        var input = new int[] { 1, 2, 3, 4 };
+        var linkedList = new DataStructures.LinkedList<int>(input);
+        linkedList.Reverse();
+
+        // Act
+        var result = linkedList.GetHead();
+
+        // Assert
+        Assert.Equal(4, result);
+    }
+
+    [Fact]
+    public void GivenAReversedLinkedList_WhenGetTailIsCalled_ThenReturnTheCorrectValue()
+    {
+        // Arrange
+        var input = new int[] { 1, 2, 3, 4 };
+        var linkedList = new DataStructures.LinkedList<int>(input);
+        linkedList.Reverse();
+
+        // Act
+        var result = linkedList.GetTail();
+
+        // Assert
+        Assert.Equal(1, result);
+    }
 }
