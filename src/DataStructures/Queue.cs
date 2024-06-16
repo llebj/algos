@@ -13,10 +13,10 @@ public class Queue<T>
             throw new InvalidOperationException("Unable to dequeue value; the queue is empty.");
         }
 
-        var item = _list.GetHead();
+        var value = _list.GetHead();
         _list.RemoveFromHead();
 
-        return item;
+        return value;
     }
 
     public void Enqueue(T item) => _list.AddToTail(item);
